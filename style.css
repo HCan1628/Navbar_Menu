@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(5, 107, 175);
+  font-size: 30px;
+}
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+span {
+  color: cornflowerblue;
+}
+.logo {
+  font-size: 40px;
+  text-shadow: 0 3px 3px gray;
+  color: black;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  /* font-size: 30px; */
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  opacity: 0.7;
+}
+
+/* Style the active/current link
+.header a.active {
+    background-color: dodgerblue;
+    color: white; 
+}*/
+
+/* Float the link section to the right */
+.header-right {
+  float: left;
+}
+.icon-bar {
+  float: right;
+  color: blue;
+}
+.topnav {
+  display: none;
+}
+.icon {
+  display: none;
+}
+
+/* Add media queries for responsiveness - when the screen is 900px wide or less, stack the links on top of each other */
+@media screen and (max-width: 900px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+  }
+  a.logo {
+    /* width: 300px; */
+    font-size: 100px;
+  }
+  .icon {
+    height: 10%;
+    position: relative;
+    right: -60px;
+  }
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right,
+  .icon-bar {
+    display: none;
+  }
+
+  .topnav a {
+    color: rgb(5, 107, 175);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    display: block;
+  }
+  .topnav {
+    display: block;
+  }
+
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 25px;
+  }
+
+  .icon {
+    transition: all 0.3s linear;
+  }
+  .icon:hover {
+    transform: rotate(-180deg);
+  }
+
+  .icon-bar2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #myLinks {
+    margin-right: 80%;
+    margin-top: 80px;
+  }
+}
